@@ -6,15 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sablon</title>
     <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <div class="container">
         <h1>Sablon</h1>
+        <div class="indexForm">
+            <div class="mt-3">
+                <label for="weight" class="form-label"></label>
+                <input type="text" class="form-control" id="weight">
+            </div>
+        </div>
+        <div class="mt-3">
+            <label for="height" class="form-label"></label>
+            <input type="text" class="form-control" id="height">
+        </div>
+
+        <div class="mt-3">
+            <button id="calcButton">Számít</button>
+        </div>
+
+        <div class="mt-3">
+            <label for="index" class="form-label">Index</label>
+            <input type="text" class="form-control" id="index">
+        </div>
+
+
     </div>
 
-
+    <script src="app.js"></script>
+    <script src="bootstrap.js"></script>
 </body>
 
 </html>
