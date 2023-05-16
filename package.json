@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jasmine-browser-runner server",
+    "test": "jasmine-browser-runner serve",
     "start": "npx lite-server"
   },
   "keywords": [],
