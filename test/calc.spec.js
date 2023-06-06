@@ -1,24 +1,24 @@
 
 
 describe('Számítás tesztelése', () => {
-    xit('Normál1: t: 80, m: 1.8, i: 24-69', () => {
-        let actual = calcBodyIndex(80, 1.8);
-        let expected = 24.69;
+    it('Lap1: l: 2, i: 2.83', () => {
+        let actual = calcDiagonal(2);
+        let expected = 2.83;
         expect(actual).toBeCloseTo(expected, 0.09);
     });
-    it('Normál2: t: 100, m: 1.72, i: 33.8', () => {
-        let actual = calcBodyIndex(100, 1.72);
-        let expected = 33.8;
+    it('Lap2: l: 4, i: 5.66', () => {
+        let actual = calcDiagonal(4);
+        let expected = 5.66;
         expect(actual).toBeCloseTo(expected, 0.09);
     });
-    it('Szélső1: t: 1, m: 1.72, i: 0.33', () => {
-        let actual = calcBodyIndex(1, 1.72);
-        let expected = 0.33;
+    it('Test: l: 02, i: 3.46', () => {
+        let actual = calcDiagonal();
+        let expected = 3.46;
         expect(actual).toBeCloseTo(expected, 0.09);
     });
-    it('Szélső2: t: 1, m: 1, i: 1', () => {
-        let actual = calcBodyIndex(1, 1);
-        let expected = 1;
+    it('Test2: l: 4, i: 6.93', () => {
+        let actual = calcBodyIndex(0);
+        let expected = 6.93;
         expect(actual).toBeCloseTo(expected, 0.09);
     });
 });

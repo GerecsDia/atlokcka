@@ -60,11 +60,14 @@
 //     }
 // }
 
+
+
 const doc = {
     lengthInput: document.querySelector('#length'),
     diagonalOutput: document.querySelector('#diagonalOutput'),
     bodyDiagonalOutput: document.querySelector('#bodyDiagonalOutput'),
-    calcButton: document.querySelector('#calcButton')
+    calcDiagonalButton: document.querySelector('#calcDiagonalButton'),
+    calcBodyDiagonalButton: document.querySelector('#calcBodyDiagonalButton')
   };
   
   const state = {
@@ -76,26 +79,41 @@ const doc = {
   });
   
   function init() {
-    if (doc.calcButton) {
-      doc.calcButton.addEventListener('click', () => {
-        startCalc();
+    if (doc.calcDiagonalButton) {
+      doc.calcDiagonalButton.addEventListener('click', () => {
+        startCalcDiagonal();
+      });
+    }
+  
+    if (doc.calcBodyDiagonalButton) {
+      doc.calcBodyDiagonalButton.addEventListener('click', () => {
+        startCalcBodyDiagonal();
       });
     }
   }
   
-  function startCalc() {
+  function startCalcDiagonal() {
     const length = parseFloat(doc.lengthInput.value);
-    
+  
     if (checkInput(length)) {
       state.length = length;
       const diagonal = calcDiagonal(state.length);
-      const bodyDiagonal = calcBodyDiagonal(state.length);
-      
-      doc.diagonalOutput.textContent = diagonal.toFixed(2);
-      doc.bodyDiagonalOutput.textContent = bodyDiagonal.toFixed(2);
+      doc.diagonalOutput.value = diagonal.toFixed(2);
     } else {
       // Handle invalid input
-      alert('Invalid input. Please enter a positive number.');
+      alert('Csak számot, pls');
+    }
+  }
+  
+  function startCalcBodyDiagonal() {
+    const length = parseFloat(doc.lengthInput.value);
+  
+    if (checkInput(length)) {
+      state.length = length;
+      const bodyDiagonal = calcBodyDiagonal(state.length);
+      doc.bodyDiagonalOutput.value = bodyDiagonal.toFixed(2);
+    } else {
+            alert('Csak számot, pls');
     }
   }
   
