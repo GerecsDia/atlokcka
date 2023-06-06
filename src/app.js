@@ -9,59 +9,6 @@
 */
  
 
-// //const doc = {
-//     lenghtInput: document.querySelector('#lenght'),
-//     indexInput: document.querySelector('#index'),
-//     calcButton: document.querySelector('#calcButton')
-// };
-
-// const state = {
-//     index: 0
-// };
-
-
-// window.addEventListener('load', () => {
-//     init();
-// });
-
-// function init() {
-//     if(doc.calcButton) {
-//     doc.calcButton.addEventListener('click', () => {
-//         console.log('működik')
-//         startCalc();
-//     });
-//     }
-//     //checkInput(a);
-
-// }
-
-// function startCalc() {
-//     let lenght = doc.lenghtInput.value;
-//         state.index = calcBodyIndex(weight, height);
-//     doc.indexInput.value = state.index;
-
-// }
-
-// function calcdiagonal() {
-//     return weight / Math.pow(height, 2);
-// }
-
-// function checkInput(input) {
-//     let inputStr = String(input);
-//     let inputNum = Number(input);
-//     if(inputStr.match(/^[0-9.]+$/)) {
-//         if(inputNum>0) {
-//             return true;
-//         }else{
-//             return false;
-//         }
-//     }else {
-//     return false;
-//     }
-// }
-
-
-
 const doc = {
     lengthInput: document.querySelector('#length'),
     diagonalOutput: document.querySelector('#diagonalOutput'),
@@ -113,7 +60,7 @@ const doc = {
       const bodyDiagonal = calcBodyDiagonal(state.length);
       doc.bodyDiagonalOutput.value = bodyDiagonal.toFixed(2);
     } else {
-            alert('Csak számot, pls');
+            alert('Mondom számot!!!');
     }
   }
   
