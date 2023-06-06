@@ -21,14 +21,7 @@
   },
   "directories": {
     "test": "test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/GerecsDia/tomtestin_js.git"
-  },
-  "bugs": {
-    "url": "https://github.com/GerecsDia/tomtestin_js/issues"
-  },
-  "homepage": "https://github.com/GerecsDia/tomtestin_js#readme",
-  "description": ""
 }
+
+}
+

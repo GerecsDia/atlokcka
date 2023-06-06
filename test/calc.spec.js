@@ -12,12 +12,12 @@ describe('Számítás tesztelése', () => {
         expect(actual).toBeCloseTo(expected, 0.09);
     });
     it('Test: l: 02, i: 3.46', () => {
-        let actual = calcDiagonal();
+        let actual = calcBodyDiagonal();
         let expected = 3.46;
         expect(actual).toBeCloseTo(expected, 0.09);
     });
     it('Test2: l: 4, i: 6.93', () => {
-        let actual = calcBodyIndex(0);
+        let actual = calcBodyDiagonal(0);
         let expected = 6.93;
         expect(actual).toBeCloseTo(expected, 0.09);
     });
